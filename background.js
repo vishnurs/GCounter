@@ -1,7 +1,7 @@
 chrome.webRequest.onBeforeRequest.addListener(
     getGoogleCount,
     {
-        urls: ["*://www.google.co.in/*"]
+        urls: ["*://www.google.co.in/*", "*://www.google.com/*"]
     }
 );
 

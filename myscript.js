@@ -8,13 +8,13 @@
             div = div.parentElement.parentElement.parentElement.parentElement.parentElement;
             node = document.createElement("div");
             node.setAttribute('id', 'gcounter-sp-container076');
-            node.setAttribute('title', 'gcounter-sp-container076');
+            node.setAttribute('title', 'Google Counter');
             container = document.getElementById('gcounter-sp-container076');
             if(!container) {
                 div.appendChild(node);
             } else {
                 container.innerHTML = '';
-                container.innerHTML = request.gcount;
+                container.innerHTML = typeof request.gcount === 'undefined' ? 0 : request.gcount;
             }
         }
     );

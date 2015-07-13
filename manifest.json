@@ -1,26 +1,28 @@
 {
- "manifest_version": 2,
-  "name": "Google Counter",
-  "version": "1.0",
-  "permissions": [
-    "tabs",
-    "webRequest",
-    "webNavigation",
-	"webRequestBlocking",
-    "http://*/*",
-    "https://*/*"
-  ],
-  "content_scripts": [
-    {
-      "matches": ["https://www.google.co.in/*"],
-      "css": ["style.css"],
-	  "js" : ["myscript.js"]
+    "manifest_version": 2,
+    "name": "Google Counter",
+    "version": "1.0",
+    "permissions": [
+        "tabs",
+        "webRequest",
+        "webNavigation",
+        "webRequestBlocking",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://www.google.co.in/*", "https://www.google.com/*"],
+            "css": ["style.css"],
+            "js" : ["myscript.js"]
+        }
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "icons": {
+        "16": "images/icon2.png",
+        "48": "images/icon2.png",
+        "128": "images/icon2.png"
     }
-  ],
-  "background": {
-	"scripts": ["background.js"]
-  },
-  "icons": { "16": "images/icon2.png",
-           "48": "images/icon2.png",
-          "128": "images/icon2.png" }
 }
